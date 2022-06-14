@@ -1,4 +1,4 @@
-package home.entities;
+package home.responses;
 
 import com.fasterxml.jackson.annotation.JsonGetter;
 import com.fasterxml.jackson.annotation.JsonSetter;
