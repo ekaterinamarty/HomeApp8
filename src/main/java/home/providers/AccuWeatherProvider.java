@@ -4,6 +4,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import home.ApplicationGlobalState;
+import home.entities.DailyForecast;
 import home.pipeline.Handler;
 import home.pipeline.Pipeline;
 import home.repository.DatabaseRepository;
@@ -18,6 +19,7 @@ import home.responses.DailyForecastsResponse;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.time.format.DateTimeFormatter;
+import java.util.stream.Collectors;
 
 public class AccuWeatherProvider implements WeatherProvider {
     private final ObjectMapper objectMapper = new ObjectMapper();
@@ -75,16 +77,16 @@ public class AccuWeatherProvider implements WeatherProvider {
     }
 
     @Override
-    public void get1DayForecast() throws IOException {
+    public void get1DayForecast() throws IOException, SQLException {
         getDailyForecasts("1day");
     }
 
     @Override
-    public void get5DaysForecasts() throws IOException {
+    public void get5DaysForecasts() throws IOException, SQLException {
         getDailyForecasts("5day");
     }
 
-    private void getDailyForecasts(String period) throws IOException {
+    private void getDailyForecasts(String period) throws IOException, SQLException {
         var context = new RequestContext();
         context.put("LocationText", ApplicationGlobalState.getInstance().getSelectedCity());
         context.put("ForecastPeriod", period);
@@ -101,6 +103,26 @@ public class AccuWeatherProvider implements WeatherProvider {
                     forecast.getTemperature().getMinimum().getValue(), forecast.getTemperature().getMinimum().getUnit(),
                     forecast.getTemperature().getMaximum().getValue(), forecast.getTemperature().getMaximum().getUnit()
             );
+        }
+        System.out.println();
+        // Save to database here.
+        var data = response.getForecasts()
+                .stream().map(DailyForecast::new).collect(Collectors.toList());
+        repository.saveDailyForecasts(data);
+    }
+
+    @Override
+    public void getAllSavedData() throws SQLException {
+        var list = repository.readDailyForecasts();
+        System.out.printf("%-10s %-10s %-15s %-15s %6s %6s\n", "City", "Date", "Day", "Night", "Min.T", "Max.T");
+        for (var item : list) {
+            System.out.printf("%-10.10s ", item.getCity());
+            System.out.printf("%-10.10s ", item.getDate());
+            System.out.printf("%-15.15s ", item.getDayText());
+            System.out.printf("%-15.15s ", item.getNightText());
+            System.out.printf("%5.1fC ", item.getMinTemp());
+            System.out.printf("%5.1fC ", item.getMaxTemp());
+            System.out.println();
         }
         System.out.println();
     }

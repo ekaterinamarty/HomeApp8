@@ -17,6 +17,7 @@ public class Controller {
         variantResult.put(1, this::getCurrentWeather);
         variantResult.put(2, this::getWeatherIn1Day);
         variantResult.put(3, this::getWeatherIn5Days);
+        variantResult.put(4, this::showAllSavedData);
     }
 
     public void onUserInput(String input) throws IOException, SQLException {
@@ -37,6 +38,10 @@ public class Controller {
 
     public void getWeatherIn5Days() throws IOException, SQLException {
         weatherProvider.get5DaysForecasts();
+    }
+
+    public void showAllSavedData() throws SQLException {
+        weatherProvider.getAllSavedData();
     }
 
     public void onCloseApp() throws SQLException {

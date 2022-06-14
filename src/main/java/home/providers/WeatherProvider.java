@@ -10,5 +10,7 @@ public interface WeatherProvider {
 
     void get5DaysForecasts() throws IOException, SQLException;
 
+    void getAllSavedData() throws SQLException;
+
     void Shutdown() throws SQLException;
 }

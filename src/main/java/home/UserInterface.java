@@ -15,14 +15,17 @@ public class UserInterface {
                     "1 - Получить текущую погоду\n" +
                     "2 - Получить погоду на следующий день\n" +
                     "3 - Получить погоду на следующие 5 дней\n" +
+                    "4 - Вывести таблицу прогнозов из базы данных\n" +
                     "выход (exit) - завершить работу";
             System.out.println(sb);
             String result = scanner.nextLine();
             checkIsExit(result);
 
-            System.out.println("Введите название города на английском языке");
-            String city = scanner.nextLine();
-            setGlobalCity(city);
+            if (!result.equals("4")) {
+                System.out.println("Введите название города на английском языке");
+                String city = scanner.nextLine();
+                setGlobalCity(city);
+            }
 
             try {
                 validateUserInput(result);
