@@ -4,43 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd6953d-6177-4a36-ad7b-ec0155c2f57d" name="Changes" comment="HomeApp7 project sourced">
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/pipeline/Action.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/pipeline/Handler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/pipeline/Pipeline.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/providers/AccuWeatherProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/providers/WeatherProvider.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/repository/DatabaseRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/repository/SQLiteRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/requests/AccuWeatherRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/requests/CurrentConditionsRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/requests/DailyForecastsRequests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/requests/LocationKeyRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/requests/RequestContext.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/AutoCompleteSearchResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/CurrentConditionsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/CurrentConditionsTemperature.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/DailyForecastsEntry.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/DailyForecastsEntryTime.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/DailyForecastsResponse.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/home/responses/DailyForecastsTemperature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/AccuWeatherProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/ApplicationGlobalState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/ApplicationGlobalState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/Controller.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/UserInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/WeatherProvider.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/CurrentWeatherResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/CurrentWeatherTemperature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/ForecastEntry.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/ForecastEntryTime.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/ForecastResponse.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/ForecastTemperature.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/entities/TemperatureEntry.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/responses/TemperatureEntry.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/enums/Functionality.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/home/enums/Periods.java" beforeDir="false" />
-    </list>
+    <list default="true" id="dcd6953d-6177-4a36-ad7b-ec0155c2f57d" name="Changes" comment="Refactored, pipeline added" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -113,7 +77,14 @@
       <option name="project" value="LOCAL" />
       <updated>1655188942601</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Refactored, pipeline added">
+      <created>1655189871494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655189871494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -130,6 +101,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Maven project created, dependencies added" />
     <MESSAGE value="HomeApp7 project sourced" />
-    <option name="LAST_COMMIT_MESSAGE" value="HomeApp7 project sourced" />
+    <MESSAGE value="Refactored, pipeline added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Refactored, pipeline added" />
   </component>
 </project>

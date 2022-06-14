@@ -46,4 +46,12 @@ public class SQLiteRepository implements DatabaseRepository {
             connection = DriverManager.getConnection("jdbc:sqlite:" + ApplicationGlobalState.getInstance().getDbFileName());
         return connection;
     }
+
+    @Override
+    public void closeRepository () throws SQLException {
+        if (connection != null) {
+            connection.close();
+        }
+    }
+
 }

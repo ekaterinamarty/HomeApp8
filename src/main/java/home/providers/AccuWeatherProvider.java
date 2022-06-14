@@ -4,16 +4,16 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 
 import home.ApplicationGlobalState;
-import home.repository.DatabaseRepository;
-import home.repository.SQLiteRepository;
-import home.responses.CurrentConditionsResponse;
-import home.responses.DailyForecastsResponse;
 import home.pipeline.Handler;
 import home.pipeline.Pipeline;
+import home.repository.DatabaseRepository;
+import home.repository.SQLiteRepository;
 import home.requests.CurrentConditionsRequest;
 import home.requests.DailyForecastsRequests;
 import home.requests.LocationKeyRequest;
 import home.requests.RequestContext;
+import home.responses.CurrentConditionsResponse;
+import home.responses.DailyForecastsResponse;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -105,6 +105,7 @@ public class AccuWeatherProvider implements WeatherProvider {
         System.out.println();
     }
 
-    public void Shutdown() {
+    public void Shutdown() throws SQLException {
+        repository.closeRepository();
     }
 }
