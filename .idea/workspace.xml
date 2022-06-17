@@ -4,15 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dcd6953d-6177-4a36-ad7b-ec0155c2f57d" name="Changes" comment="Maven project created, dependencies added">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/example/AppTest.java" afterDir="false" />
+    <list default="true" id="dcd6953d-6177-4a36-ad7b-ec0155c2f57d" name="Changes" comment="DatabaseRepository base implementation added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/home/entities/DailyForecast.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/Controller.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/Controller.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/UserInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/UserInterface.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/providers/AccuWeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/providers/AccuWeatherProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/providers/WeatherProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/providers/WeatherProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/repository/DatabaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/repository/DatabaseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/home/repository/SQLiteRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/home/repository/SQLiteRepository.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,6 +28,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -46,7 +51,7 @@
   </component>
   <component name="RunManager">
     <configuration name="MainApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hw8.MainApp" />
+      <option name="MAIN_CLASS_NAME" value="home.MainApp" />
       <module name="HomeApp8" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,6 +72,35 @@
       <option name="presentableId" value="Default" />
       <updated>1655109842553</updated>
     </task>
+    <task id="LOCAL-00001" summary="Maven project created, dependencies added">
+      <created>1655188655866</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1655188655866</updated>
+    </task>
+    <task id="LOCAL-00002" summary="HomeApp7 project sourced">
+      <created>1655188942601</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1655188942601</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Refactored, pipeline added">
+      <created>1655189871494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1655189871494</updated>
+    </task>
+    <task id="LOCAL-00004" summary="DatabaseRepository base implementation added">
+      <created>1655190118084</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1655190118084</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -82,6 +116,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Maven project created, dependencies added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Maven project created, dependencies added" />
+    <MESSAGE value="HomeApp7 project sourced" />
+    <MESSAGE value="Refactored, pipeline added" />
+    <MESSAGE value="DatabaseRepository base implementation added" />
+    <option name="LAST_COMMIT_MESSAGE" value="DatabaseRepository base implementation added" />
   </component>
 </project>

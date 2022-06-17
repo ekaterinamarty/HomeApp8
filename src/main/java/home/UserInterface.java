@@ -1,26 +1,31 @@
 package home;
 
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class UserInterface {
-
     private final Controller controller = new Controller();
 
-    public void runApplication() {
+    public void runApplication() throws SQLException {
         Scanner scanner = new Scanner(System.in);
+        //noinspection InfiniteLoopStatement
         while (true) {
-            System.out.println(
-                    "Выберите действие: " +
-                            "1 - Получить текущую погоду, " +
-                            "2 - Получить погоду на следующие 5 дней, " +
-                            "выход (exit) - завершить работу");
+            String sb = "Выберите действие:\n" +
+                    "1 - Получить текущую погоду\n" +
+                    "2 - Получить погоду на следующий день\n" +
+                    "3 - Получить погоду на следующие 5 дней\n" +
+                    "4 - Вывести таблицу прогнозов из базы данных\n" +
+                    "выход (exit) - завершить работу";
+            System.out.println(sb);
             String result = scanner.nextLine();
             checkIsExit(result);
 
-            System.out.println("Введите название города на английском языке");
-            String city = scanner.nextLine();
-            setGlobalCity(city);
+            if (!result.equals("4")) {
+                System.out.println("Введите название города на английском языке");
+                String city = scanner.nextLine();
+                setGlobalCity(city);
+            }
 
             try {
                 validateUserInput(result);
@@ -31,15 +36,16 @@ public class UserInterface {
 
             try {
                 notifyController(result);
-            } catch (IOException e) {
+            } catch (IOException | SQLException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    private void checkIsExit(String result) {
+    private void checkIsExit(String result) throws SQLException {
         if (result.equalsIgnoreCase("выход") || result.equalsIgnoreCase("exit")) {
             System.out.println("Завершаю работу");
+            controller.onCloseApp();
             System.exit(0);
         }
     }
@@ -59,7 +65,7 @@ public class UserInterface {
         }
     }
 
-    private void notifyController(String input) throws IOException {
+    private void notifyController(String input) throws IOException, SQLException {
         controller.onUserInput(input);
     }
 }

@@ -22,4 +22,6 @@ public final class ApplicationGlobalState {
     public String getApiKey() {
         return "YqmDwNyGMGtAvTh1QKN0Jf1RAht13iBq";
     }
+
+    public String getDbFileName() { return "C:\\sqlite\\db\\AccuWeather.db"; }
 }
